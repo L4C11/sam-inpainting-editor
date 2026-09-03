@@ -1,0 +1,36 @@
+# --- Python és Django ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.sqlite3
+db.sqlite3
+.venv/
+env/
+.env
+
+# --- Django Média és Statikus fájlok ---
+media/
+staticfiles/
+
+# --- AI Modellek és Súlyok (SAM & Stable Diffusion) ---
+checkpoints/*.pth
+checkpoints/*.pt
+checkpoints/*.onnx
+*.safetensors
+*.ckpt
+*.bin
+# HuggingFace cache könyvtár (ha lokálisan a projektbe tölti le a modelleket)
+.cache/
+huggingface/
+
+# --- IDE és Szerkesztő fájlok (VS Code, PyCharm) ---
+.vscode/
+.idea/
+
+# --- OS Generált fájlok ---
+.DS_Store
+Thumbs.db
+
+# --- Logok ---
+*.log
+logs/
