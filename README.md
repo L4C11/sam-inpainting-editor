@@ -53,6 +53,6 @@ Refine (Optional): Use the manual brush to add/subtract from the AI-generated ma
 Generate: Adjust your Stable Diffusion parameters (Prompts, Steps, Guidance) in the left panel and hit the Inpaint button.  
 Export: Click the Save (💾) icon on your generated layer in the right sidebar to download the image with embedded prompt metadata.  
 <img width="1920" height="1079" alt="2 - Kész" src="https://github.com/user-attachments/assets/11a79630-b080-458a-99be-f757427beedf" />  
-
-📄 License
-This project is licensed under the MIT License - see the LICENSE file for details.
+  
+## 📄 License  
+This project is licensed under the MIT License - see the LICENSE file for details.  
