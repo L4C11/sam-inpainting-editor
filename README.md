@@ -32,7 +32,7 @@ Because this project is fully containerized, installation is completely friction
    cd sam-inpainting-editor  
    
 2. Set up environment variables:  
-Create a .env file in the root directory (you can copy .env.example if available) and configure any required API keys or model paths.  
+Create a .env file in the root directory and configure any required API keys or model paths.  
 
 3. Build and spin up the containers:  
    docker-compose up --build  
