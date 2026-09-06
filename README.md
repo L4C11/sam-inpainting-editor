@@ -30,14 +30,11 @@ Because this project is fully containerized, installation is completely friction
 1. **Clone the repository:**  
    git clone https://github.com/L4C11/sam-inpainting-editor.git  
    cd sam-inpainting-editor  
-   
-2. Set up environment variables:  
-Create a .env file in the root directory and configure any required API keys or model paths.  
 
-3. Build and spin up the containers:  
+2. Build and spin up the containers:  
    docker-compose up --build  
   
-4. Access the application:    
+3. Access the application:    
    Open your browser and navigate to:    
    http://localhost:8000  
 
