@@ -129,7 +129,9 @@ class InpaintView(APIView):
             return Response({'error': 'Invalid session.'}, status=status.HTTP_404_NOT_FOUND)
 
         session_data = SESSIONS[session_id]
-        img_bgr = session_data['image'].copy()
+        original_image = session_data['image']
+        orig_height, orig_width = original_image.shape[:2]
+        img_bgr = original_image.copy()
         objects = session_data.get('objects', {})
 
         if not objects:
@@ -150,6 +152,13 @@ class InpaintView(APIView):
 
         # Most már az új paramétereket is beküldjük!
         inpainted_bgr = ai_service.inpaint(img_bgr, dilated_mask, prompt, negative_prompt, steps, guidance)
+
+        # A generált kép méretét visszaállítjuk az eredeti feltöltött kép méretére.
+        inpainted_bgr = cv2.resize(
+            inpainted_bgr,
+            (orig_width, orig_height),
+            interpolation=cv2.INTER_CUBIC,
+        )
 
         # --- KÉP MENTÉSE METAADATOKKAL ---
         

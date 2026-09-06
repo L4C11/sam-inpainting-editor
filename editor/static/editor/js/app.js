@@ -101,7 +101,7 @@ function initApp() {
 
         if (url) {
             const link = document.createElement('a');
-            link.download = 'layer.png';
+            link.download = layerId + '.png';
             link.href = url;
             link.click();
         }
